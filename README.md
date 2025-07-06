@@ -1,7 +1,7 @@
 # 🌍 Community Demographic Profiler
 
 ## 📌 Project Overview
-**Title:** Building a Community Demographic Profiler with Public Data  
+**Title:** Building a Community Demographic Profiler with Public Data
 **Goal:** Create an automated data pipeline that pulls demographic, economic, and migration data (e.g., from the U.S. Census, IRS, and BLS) for U.S. ZIP codes and counties. The final output is a Quarto-based, interactive report allowing users to explore communities based on characteristics like age distribution, income levels, net migration, and employment trends.
 
 This project simulates a realistic data engineering and analytics workflow designed for public insight, strategic planning, or relocation support. It demonstrates the integration of multiple open datasets, robust transformation logic, and stakeholder-friendly presentation.
@@ -13,8 +13,8 @@ It’s particularly well aligned with **Analytics Engineering** and **Data Engin
 - Narrative and interactive data storytelling
 
 ## 🧰 Tech Stack
-- **Python** (`requests`, `pandas`, `SQLAlchemy`)
-- **APIs**: U.S. Census Bureau, IRS migration data, BLS (Bureau of Labor Statistics)
+- **Python** (`requests`, `pandas`, `SQLAlchemy`, [`census`](https://pypi.org/project/census/))
+- **APIs**: U.S. Census Bureau ([`census`](https://pypi.org/project/census/)), IRS migration data, BLS (Bureau of Labor Statistics)
 - **Database**: PostgreSQL (Neon.tech) or SQLite (for local prototyping)
 - **Quarto**: For interactive HTML report hosted on GitHub Pages
 - **Orchestration**: GitHub Actions or local cron jobs
