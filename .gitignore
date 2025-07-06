@@ -1,2 +1,6 @@
 # credentials
 credentials.yaml
+
+# vs code workspace
+*.code-workspace
+

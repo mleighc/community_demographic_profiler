@@ -4,7 +4,7 @@ from census import Census
 import yaml
 
 # Load API key
-with open("config/credentials.yaml", "r") as f:
+with open("../config/credentials.yaml", "r") as f:
     config = yaml.safe_load(f)
 
 c = Census(config["census"]["api_key"])
