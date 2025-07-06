@@ -1,18 +1,22 @@
-# fetch_census.py
-
 from census import Census
 import yaml
 
-# Load API key
-with open("../config/credentials.yaml", "r") as f:
+# Load credentials
+with open("../config/credentials.yaml") as f:
     config = yaml.safe_load(f)
 
 c = Census(config["census"]["api_key"])
 
-# Example: Fetch median household income from ACS 5-year 2022 by ZIP code
-data = c.acs5.zipcode(
-    ["B19013_001E"], config["project"]["zip_codes"]  # Median household income
-)
+# Define variables to fetch
+variables = ["B19013_001E"]  # Median household income
 
-for row in data:
+# You must use `.get()` and specify the geography explicitly
+data = c.acs5.get(variables, {"for": "zip code tabulation area:*"})
+
+# Filter for specific ZCTAs if needed
+target_zips = {"48104", "48201", "49001"}
+filtered_data = [row for row in data if row["zip code tabulation area"] in target_zips]
+
+# Display
+for row in filtered_data:
     print(row["zip code tabulation area"], row["B19013_001E"])
