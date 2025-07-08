@@ -4,3 +4,6 @@ credentials.yaml
 # vs code workspace
 *.code-workspace
 
+# census reference files
+all-geocodes-fips-v2020.xlsx
+*all-geocodes-fips-v2020.xlsx
