@@ -7,3 +7,9 @@ credentials.yaml
 # census reference files
 all-geocodes-fips-v2020.xlsx
 *all-geocodes-fips-v2020.xlsx
+
+# Raw Data Files
+data_raw/
+
+# Quarto render files
+reports/*_files/

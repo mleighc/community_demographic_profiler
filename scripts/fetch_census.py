@@ -13,7 +13,15 @@ c = Census(config["census"]["api_key"])
 
 # Define counties (FIPS): Wayne=163, Oakland=125, Washtenaw=161, Macomb=099
 state_fips = "26"
-counties = {"Wayne": "163", "Oakland": "125", "Washtenaw": "161", "Macomb": "099"}
+counties = {
+    "Wayne": "163",
+    "Oakland": "125",
+    "Washtenaw": "161",
+    "Macomb": "099",
+    "Livingston": "093",
+    "Lapeer": "087",
+    "St. Clair": "147",
+}
 
 # Variables to fetch
 variables = {
@@ -30,6 +38,7 @@ variables = {
     "B15003_024E": "num_with_professional_degree",
 }
 
+# store data in a dataframe
 rows = []
 for name, fips in counties.items():
     result = c.acs5.get(
@@ -40,4 +49,20 @@ for name, fips in counties.items():
     rows.append(row)
 
 df = pd.DataFrame(rows)
-print(df)
+
+# calculate additional columns
+df["poverty_rate_pct"] = round(
+    (df["num_below_pov_level"] / df["pov_status_universe_total"]) * 100, 1
+)
+
+degree_cols = [
+    "num_with_bachelors",
+    "num_with_masters",
+    "num_with_professional_degree",
+    "num_with_doctorate",
+]
+df["bachelors_or_higher"] = df[degree_cols].sum(axis=1)
+df["pct_higher_ed"] = round((df["bachelors_or_higher"] / df["pop_over_25"]) * 100, 1)
+
+# write csv to data_clean folder
+df.to_csv("../data_clean/census_acs5_clean.csv", index=False)

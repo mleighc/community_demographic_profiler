@@ -1,0 +1,7 @@
+---
+title: "Metropolitan Detroit Community Explorer"
+format:
+  html:
+    toc: true
+    self-contained: true
+---
