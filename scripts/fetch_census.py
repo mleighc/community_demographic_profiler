@@ -46,6 +46,7 @@ for name, fips in counties.items():
     )[0]
     row = {variables[k]: result[k] for k in variables}
     row["county"] = name
+    row["fips"] = fips
     rows.append(row)
 
 df = pd.DataFrame(rows)
