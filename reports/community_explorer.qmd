@@ -1,7 +1,23 @@
 ---
-title: "Metropolitan Detroit Community Explorer"
+title: "Community Demographic Explorer"
 format:
   html:
     toc: true
+    toc-depth: 2
+    theme: cosmo
+    code-fold: true
     self-contained: true
+execute:
+  echo: true
 ---
+
+## Project Summary
+This tool enables interactive exploration of U.S. communities based on publicly available demographic and economic data. Data is sourced from the Census Bureau, IRS migration reports, and the Bureau of Labor Statistics.
+
+## Dataset Snapshot
+```{r}
+library(readr)
+library(dplyr)
+
+profiles <- read_csv("../data_clean/census_acs5_clean.csv")
+head(profiles)
