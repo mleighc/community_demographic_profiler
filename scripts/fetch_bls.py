@@ -1,5 +1,6 @@
-import yaml
 import pandas as pd
+
+# Data Source: https://www.bls.gov/lau/tables.htm#cntyaa
 
 # Define counties (FIPS): Wayne=163, Oakland=125, Washtenaw=161, Macomb=099
 state_fips = "26"
@@ -40,7 +41,5 @@ df_bls_metro_det_23 = df_bls_counties_23[
 ]
 
 df_bls_metro_det_23.drop(columns=["laus_code", "year"], inplace=True)
-
-# print(df_bls_metro_det_23)
 
 df_bls_metro_det_23.to_csv("../data_clean/bls_laus_2023_clean.csv", index=False)

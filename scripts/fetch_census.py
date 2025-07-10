@@ -1,6 +1,7 @@
 from census import Census
 import yaml
 import pandas as pd
+from us import states
 
 # ACS5 docs: https://www.census.gov/data/developers/data-sets/acs-5year.html
 # Variable Names/Codes: https://api.census.gov/data/2021/acs/acs5/variables.html
