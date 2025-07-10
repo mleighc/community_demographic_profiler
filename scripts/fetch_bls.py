@@ -1,6 +1,7 @@
 import pandas as pd
 
-# Data Source: https://www.bls.gov/lau/tables.htm#cntyaa
+# Data Source LAUS: https://www.bls.gov/lau/tables.htm#cntyaa
+# Data Source QCEW: https://www.bls.gov/cew/downloadable-data-files.htm DO MORE RESEARCH ON THIS WAGES SURVEY
 
 # Define counties (FIPS): Wayne=163, Oakland=125, Washtenaw=161, Macomb=099
 state_fips = "26"
