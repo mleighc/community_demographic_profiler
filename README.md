@@ -1,23 +1,33 @@
-# 🌍 Community Demographic Profiler
+# Metro Detroit Community Demographic Profiler
 
-## 📌 Project Overview
-**Title:** Building a Community Demographic Profiler with Public Data
-**Goal:** Create an automated data pipeline that pulls demographic, economic, and migration data (e.g., from the U.S. Census, IRS, and BLS) for U.S. ZIP codes and counties. The final output is a Quarto-based, interactive report allowing users to explore communities based on characteristics like age distribution, income levels, net migration, and employment trends.
+A local demographic profiling tool focused on key counties in the Metro Detroit region, built to support community insights, equity analysis, and strategic planning.
 
-This project simulates a realistic data engineering and analytics workflow designed for public insight, strategic planning, or relocation support. It demonstrates the integration of multiple open datasets, robust transformation logic, and stakeholder-friendly presentation.
+## 📊 Overview
 
-It’s particularly well aligned with **Analytics Engineering** and **Data Engineering** roles, showcasing:
-- API integration and dataset normalization
-- Schema design and structured data modeling
-- Automated orchestration
-- Narrative and interactive data storytelling
+This project pulls, cleans, and formats demographic and labor data from public sources to create consistent, ready-to-analyze profiles for Wayne, Oakland, Macomb, and Washtenaw Counties. Built in Python using open data and reproducible code, it aims to support data-driven storytelling, grantmaking, and civic engagement.
 
-## 🧰 Tech Stack
-- **Python** (`requests`, `pandas`, `SQLAlchemy`, [`census`](https://pypi.org/project/census/))
-- **APIs**: U.S. Census Bureau ([`census`](https://pypi.org/project/census/)), IRS migration data, BLS (Bureau of Labor Statistics)
-- **Database**: PostgreSQL (Neon.tech) or SQLite (for local prototyping)
-- **Quarto**: For interactive HTML report hosted on GitHub Pages
-- **Orchestration**: GitHub Actions or local cron jobs
+## ✅ Features
+
+- Focused on **Metro Detroit** counties
+- Pulls data from **Census (ACS 5-Year Estimates)** and **BLS LAUS**
+- Captures **population, income, race/ethnicity, education, and unemployment**
+- Outputs clean `.csv` files for dashboards, policy briefs, or reports
+- Easy to adapt for new counties or new metrics
+- Modular Python scripts for reusability
+
+## 📍 Counties Covered
+
+| County    | FIPS Code |
+| --------- | --------- |
+| Wayne     | 26163     |
+| Oakland   | 26125     |
+| Macomb    | 26099     |
+| Washtenaw | 26161     |
+
+## 📂 Data Sources
+
+- [U.S. Census Bureau – American Community Survey (ACS) 5-Year](https://www.census.gov/programs-surveys/acs)
+- [Bureau of Labor Statistics – Local Area Unemployment Statistics (LAUS)](https://www.bls.gov/lau/)
 
 ## 📁 Project Structure
 ```bash
@@ -53,12 +63,13 @@ community-demographic-profiler/
 ```
 
 ## ✅ Goals
-- Extract demographic and economic data for selected ZIP codes or counties
+- Extract demographic and economic data for selected ZIP codes or counties in metro detroit
 - Normalize and merge datasets into unified community profiles
 - Insert into a structured database for querying
 - Build an interactive Quarto report for exploration
 - Automate updates using cron or GitHub Actions
 - Provide visual and narrative summaries of each area
+- Assess options for interactive data exploration
 
 ## 🗓️ Timeline / Phases
 1. **Data Source Review**: Select endpoints and variables (e.g., population, income, age)
@@ -72,7 +83,7 @@ community-demographic-profiler/
 ## 📋 Project Board
 
 ### 🔨 In Progress
-- [ ] Research and select datasets (Census, IRS, BLS)
+- [ ] Research and select datasets (Census, BLS, IMLS, UDSA)
 - [ ] Define database schema and key variables
 - [ ] Draft fetch scripts for one data source
 
@@ -89,3 +100,7 @@ community-demographic-profiler/
 
 ## 🔗 Inspiration
 This project draws from real-world questions faced by individuals and organizations: where to live, where to focus services, how communities are changing, and what economic conditions look like on the ground.
+
+## 📄 License
+Apache License 2.0. See [LICENSE](https://www.apache.org/licenses/LICENSE-2.0.txt) for details.
+
