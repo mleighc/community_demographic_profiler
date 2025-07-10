@@ -3,8 +3,7 @@
 A local demographic profiling tool focused on key counties in the Metro Detroit region, built to support community insights, equity analysis, and strategic planning.
 
 ## 📊 Overview
-
-This project pulls, cleans, and formats demographic and labor data from public sources to create consistent, ready-to-analyze profiles for Wayne, Oakland, Macomb, and Washtenaw Counties. Built in Python using open data and reproducible code, it aims to support data-driven storytelling, grantmaking, and civic engagement.
+This project pulls, cleans, and formats demographic and labor data from public sources to create consistent, ready-to-analyze profiles for Wayne, Oakland, Macomb, Washtenaw, Livingston, Lapeer, and St. Clair Counties. Built in Python using open data and reproducible code, it aims to support data-driven storytelling, grantmaking, and civic engagement.
 
 ## ✅ Features
 
@@ -17,17 +16,22 @@ This project pulls, cleans, and formats demographic and labor data from public s
 
 ## 📍 Counties Covered
 
-| County    | FIPS Code |
-| --------- | --------- |
-| Wayne     | 26163     |
-| Oakland   | 26125     |
-| Macomb    | 26099     |
-| Washtenaw | 26161     |
+| County     | FIPS Code |
+| ---------- | --------- |
+| Wayne      | 26163     |
+| Oakland    | 26125     |
+| Macomb     | 26099     |
+| Washtenaw  | 26161     |
+| Livingston | 26093     |
+| Lapeer     | 26087     |
+| St. Clair  | 26147     |
 
 ## 📂 Data Sources
 
 - [U.S. Census Bureau – American Community Survey (ACS) 5-Year](https://www.census.gov/programs-surveys/acs)
 - [Bureau of Labor Statistics – Local Area Unemployment Statistics (LAUS)](https://www.bls.gov/lau/)
+- [Institute of Museum and Library Services - Public Libraries Survey (PLS)](https://www.imls.gov/research-evaluation/surveys/public-libraries-survey-pls)
+- [U.S. Department of Agriculture - Food Access Research Atlas (FARA)](https://www.ers.usda.gov/data-products/food-access-research-atlas/download-the-data)
 
 ## 📁 Project Structure
 ```bash
